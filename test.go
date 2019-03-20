@@ -1,7 +1,14 @@
+// errors.go
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
+
+var errNotFound error = errors.New("Not found error")
 
 func main() {
-	fmt.Println("hello test....")
+	fmt.Printf("error: %v", errNotFound)
 }
+// error: Not found error
